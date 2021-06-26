@@ -373,12 +373,27 @@ if (Meteor.isServer) {
     const storiesAppLogger = getAppLoggerForFile(__filename);
 
     export const runTestCases = async (projectId, options = {}) => {
-        const { language, ids } = options;
+        const { language, ids, partialTests } = options;
+
+        let selectedGroups;
+
+        if (partialTests) {
+            const groups = StoryGroups.find(
+                { projectId, smartGroup: { $exists: false } },
+                { fields: { _id: 1, name: 1, selected: 1 } },
+            ).fetch();
+
+            selectedGroups = groups.filter(g => g.selected).length
+                ? groups.filter(g => g.selected)
+                : groups;
+        }
+
         const query = {
             type: 'test_case',
             projectId,
             ...(ids?.length > 0 ? { _id: { $in: ids } } : {}),
-            ...(language ? { language } : {}),
+            ...(selectedGroups?.length > 0 ? { storyGroupId: { $in: selectedGroups.map(({ _id }) => _id) } } : {}),
+            ...(language ? { language } : {})
         };
         const testCases = Stories.find({ ...query }, { fields: { _id: 1, steps: 1, language: 1 } })
         .map(({
@@ -388,6 +403,7 @@ if (Meteor.isServer) {
             steps,
             language: testLanguage,
         }));
+
         if (testCases?.length < 1) {
             return { passing: 0, failing: 0 }
         }
@@ -436,7 +452,7 @@ if (Meteor.isServer) {
             try {
                 const { ids, language } = options;
 
-                const report = await runTestCases(projectId, options)
+                const report = await runTestCases(projectId, options);
 
                 if (report.passing < 1 && report.failing < 1) {
                     if (language) {

@@ -283,7 +283,12 @@ class TrainButton extends React.Component {
             project: { _id: projectId },
             language,
         } = this.context;
+
         const languageName = languages[language]?.name;
+        const storyGroups = StoryGroups.find({ projectId }, { field: { _id: 1 } }).fetch();
+        const selectedStoryGroups = storyGroups.filter(storyGroup => storyGroup.selected);
+        const partialTests = selectedStoryGroups.length > 0;
+
         return (
             <>
                 <Dropdown.Item
@@ -292,6 +297,14 @@ class TrainButton extends React.Component {
                 >
                     Run all tests
                 </Dropdown.Item>
+                {!!partialTests && (
+                    <Dropdown.Item
+                        onClick={() => runTestCaseStories(projectId, { partialTests })}
+                        data-cy='run-selected-tests'
+                    >
+                        Run focused tests
+                    </Dropdown.Item>
+                )}
                 {!!languageName && (
                     <Dropdown.Item
                         onClick={() => runTestCaseStories(projectId, { language })}
