@@ -21,7 +21,7 @@ const project = {
     name: 'My Project',
     defaultLanguage: 'en',
     languages: ['en'],
-    defaultDomain: { content: 'slots:\n  - name: disambiguation_message\n    type: unfeaturized\nactions:\n  - action_defaultdbdomain' },
+    defaultDomain: { content: 'slots:\n  - name: disambiguation_message\n    type: any\nactions:\n  - action_defaultdbdomain' },
     namespace: 'bf-ha',
 };
 

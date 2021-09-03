@@ -36,7 +36,7 @@ const getSlotData = (name = 'testSlot', type) => {
             _id: 'DefaultSlot',
             projectId: 'bf',
             name,
-            type: 'unfeaturized',
+            type: 'any',
         };
     }
 };

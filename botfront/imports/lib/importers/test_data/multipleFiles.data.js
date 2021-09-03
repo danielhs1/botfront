@@ -36,7 +36,7 @@ const defaultDomain = {
     slots: [
         {
             name: 'disambiguation_message',
-            type: 'unfeaturized',
+            type: 'any',
         },
     ],
 };
@@ -227,7 +227,7 @@ export const multipleFiles = [
                 {
                     initialValue: 'fr',
                     name: 'a_language',
-                    type: 'unfeaturized',
+                    type: 'any',
                 },
             ],
             responses: [{

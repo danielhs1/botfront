@@ -24,7 +24,7 @@ export const deleteForms = async ({ projectId, ids }) => {
 
 const addNewSlots = async (projectId, slots) => {
     slots.forEach(({ name }) => {
-        const slotData = { name, type: 'unfeaturized', projectId };
+        const slotData = { name, type: 'any', projectId };
         try {
             const newId = Slots.insert(slotData);
             auditLogIfOnServer('Inserted slot', {
@@ -74,12 +74,12 @@ export const deleteUnusedSlots = async (formId, projectId, newSlots) => {
     const removedSlots = Slots.find({
         projectId,
         name: { $in: slotsToRemove },
-        type: 'unfeaturized',
+        type: 'any',
     }).fetch();
     Slots.remove({
         projectId,
         name: { $in: slotsToRemove },
-        type: 'unfeaturized',
+        type: 'any',
     });
     removedSlots.forEach((slot) => {
         auditLogIfOnServer('Deleted slot', {

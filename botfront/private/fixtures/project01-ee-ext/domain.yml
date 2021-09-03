@@ -2562,11 +2562,11 @@ slots:
           from: '09:00'
           to: 1020
       timezone: -4
-    type: unfeaturized
+    type: any
   company_size:
-    type: unfeaturized
+    type: any
   company_website:
-    type: unfeaturized
+    type: any
   context:
     initial_value: pricing
     type: categorical
@@ -2585,46 +2585,46 @@ slots:
     initial_value: NA
     type: text
   email_disconnected:
-    type: unfeaturized
+    type: any
   fallback_language:
     initial_value: en
-    type: unfeaturized
+    type: any
   feature:
     type: categorical
     values:
       - onscreen guidance
   first_name:
-    type: unfeaturized
+    type: any
   founding_year:
-    type: unfeaturized
+    type: any
   last_name:
-    type: unfeaturized
+    type: any
   message:
-    type: unfeaturized
+    type: any
   no_interest_message:
-    type: unfeaturized
+    type: any
   primary_service:
-    type: unfeaturized
+    type: any
   project_status:
-    type: unfeaturized
+    type: any
   step1:
-    type: unfeaturized
+    type: any
   step2:
-    type: unfeaturized
+    type: any
   step3:
-    type: unfeaturized
+    type: any
   step4:
-    type: unfeaturized
+    type: any
   step5:
-    type: unfeaturized
+    type: any
   step6:
-    type: unfeaturized
+    type: any
   step7:
-    type: unfeaturized
+    type: any
   step8:
-    type: unfeaturized
+    type: any
   step9:
-    type: unfeaturized
+    type: any
   trial_form_context:
     type: categorical
     values:
@@ -2635,6 +2635,6 @@ slots:
       - support
       - marketing
   utm_keyword:
-    type: unfeaturized
+    type: any
   work_email:
-    type: unfeaturized
+    type: any

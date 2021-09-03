@@ -177,7 +177,7 @@ export const responses = [
 
 ];
 
-export const defaultDomain = 'slots:  disambiguation_message:    type: unfeaturizedactions:  - action_botfront_disambiguation  - action_botfront_disambiguation_followup  - action_botfront_fallback  - action_botfront_mapping';
+export const defaultDomain = 'slots:  disambiguation_message:    type: anyactions:  - action_botfront_disambiguation  - action_botfront_disambiguation_followup  - action_botfront_fallback  - action_botfront_mapping';
 
 export const storiesFormatedForRasa = ['# Intro stories\n\n## Get started\n* get_started\n    - utter_get_started',
     '# Default stories\n\n## Greetings\n* chitchat.greet\n    - utter_hi\n## Farewells\n* chitchat.bye OR hi\n    - utter_bye'];

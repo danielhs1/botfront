@@ -30,13 +30,13 @@ responses:
           forceClose: true
 slots:
     fallback_language:
-      type: unfeaturized
+      type: any
       initial_value: en
     a_language:
-      type: unfeaturized
+      type: any
       initial_value: fr
     test_message:
-      type: unfeaturized
+      type: any
 forms:
     restaurant_form:
       cuisine:
@@ -73,15 +73,15 @@ responses:
           forceClose: true
 slots:
     fallback_language:
-      type: unfeaturized
+      type: any
       initial_value: en
     a_language:
-      type: unfeaturized
+      type: any
       initial_value: fr
     test_message:
-      type: unfeaturized
+      type: any
     bla_message:
-      type: unfeaturized
+      type: any
 forms:  
     restaurant_form:
       cuisine:
@@ -136,12 +136,12 @@ export const validDomainParsed = {
     slots: [
         {
             name: 'a_language',
-            type: 'unfeaturized',
+            type: 'any',
             initialValue: 'fr',
         },
         {
             name: 'test_message',
-            type: 'unfeaturized',
+            type: 'any',
         },
     ],
     forms: {
@@ -199,16 +199,16 @@ export const validDomainFrParsed = {
     slots: [
         {
             name: 'a_language',
-            type: 'unfeaturized',
+            type: 'any',
             initialValue: 'fr',
         },
         {
             name: 'test_message',
-            type: 'unfeaturized',
+            type: 'any',
         },
         {
             name: 'bla_message',
-            type: 'unfeaturized',
+            type: 'any',
         },
         
     ],
@@ -297,18 +297,18 @@ export const validDomainsMerged = {
         {
             projectId: 'bf',
             name: 'a_language',
-            type: 'unfeaturized',
+            type: 'any',
             initialValue: 'fr',
         },
         {
             projectId: 'bf',
             name: 'bla_message',
-            type: 'unfeaturized',
+            type: 'any',
         },
         {
             projectId: 'bf',
             name: 'test_message',
-            type: 'unfeaturized',
+            type: 'any',
         },
     ],
     forms: {

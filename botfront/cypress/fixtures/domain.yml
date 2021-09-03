@@ -20,8 +20,8 @@ responses:
       language: en
 slots:
   fallback_language:
-    type: unfeaturized
+    type: any
     initial_value: en
   disambiguation_message:
-    type: unfeaturized
+    type: any
 forms: {}

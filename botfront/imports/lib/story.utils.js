@@ -242,7 +242,7 @@ export const getFragmentsAndDomain = async (projectId, language, env = 'developm
 
     defaultDomain.slots = {
         ...(defaultDomain.slots || {}),
-        fallback_language: { type: 'unfeaturized', initial_value: defaultLanguage },
+        fallback_language: { type: 'any', initial_value: defaultLanguage },
     };
     appMethodLogger.debug('Selecting fragment groups');
     const groups = StoryGroups.find(

@@ -33,7 +33,7 @@ const SlotPopupContent = (props) => {
         'list',
         'text',
         'categorical',
-        ...(chooseSlotWithoutValue ? ['unfeaturized'] : []),
+        ...(chooseSlotWithoutValue ? ['any'] : []),
     ].filter(type => !excludeSlotsOfType.includes(type));
 
     const hasFeaturizedSlots = useMemo(() => slotsToUse.filter(s => allowedTypes.includes(s.type)).length > 0, [slotsToUse, allowedTypes]);

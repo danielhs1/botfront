@@ -22,7 +22,6 @@ export const SlotSchema = new SimpleSchema({
             'categorical',
             'float',
             'list',
-            'unfeaturized',
             'any',
         ],
     },
@@ -74,7 +73,7 @@ const slotSchemas = {
         initialValue: { type: String, defaultValue: null, optional: true },
     }).extend(SlotSchema),
 
-    unfeaturized: new SimpleSchema({
+    any: new SimpleSchema({
         initialValue: SimpleSchema.oneOf(
             { type: String, defaultValue: null, optional: true },
             { type: Boolean, defaultValue: false, optional: true },
@@ -89,7 +88,7 @@ const slotSchemas = {
     }).extend(SlotSchema),
 };
 
-slotSchemas.any = slotSchemas.unfeaturized;
+slotSchemas.any = slotSchemas.any;
 
 slotSchemas.float.messageBox.messages({
     en: {

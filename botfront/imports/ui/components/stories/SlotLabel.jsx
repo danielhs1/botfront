@@ -44,5 +44,5 @@ SlotLabel.propTypes = {
 
 SlotLabel.defaultProps = {
     disableSelection: false,
-    excludeSlotsOfType: ['unfeaturized'],
+    excludeSlotsOfType: ['any'],
 };

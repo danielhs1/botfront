@@ -158,7 +158,7 @@ export const projectFixture = {
     languages: ['en', 'fr'],
     defaultDomain: {
         content:
-            'slots:\n  disambiguation_message:\n    type: unfeaturized\nactions:\n  - action_botfront_disambiguation\n  - action_botfront_disambiguation_followup\n  - action_botfront_fallback\n  - action_botfront_mapping',
+            'slots:\n  disambiguation_message:\n    type: any\nactions:\n  - action_botfront_disambiguation\n  - action_botfront_disambiguation_followup\n  - action_botfront_fallback\n  - action_botfront_mapping',
     },
     disabled: false,
     updatedAt: { $date: { $numberLong: '1583521253932' } },

@@ -1,6 +1,6 @@
 slots:
   bf_office_hours:
-    type: unfeaturized
+    type: any
     initial_value:
       timezone: -4
       days:

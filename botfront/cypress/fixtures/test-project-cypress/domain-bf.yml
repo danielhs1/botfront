@@ -22,11 +22,11 @@ responses:
       language: fr
 slots:
   disambiguation_message:
-    type: unfeaturized
+    type: any
   fallback_language:
-    type: unfeaturized
+    type: any
     initial_value: en
   test_language:
-    type: unfeaturized
+    type: any
     initial_value: en
 forms: {}

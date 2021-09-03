@@ -39,7 +39,7 @@ const defaultDomain = {
     slots: [
         {
             name: 'disambiguation_message',
-            type: 'unfeaturized',
+            type: 'any',
         },
     ],
 };

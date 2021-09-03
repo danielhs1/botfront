@@ -49,7 +49,7 @@ if (Meteor.isServer) {
         defaultDomain: {
             content:
             // eslint-disable-next-line max-len
-            'slots:\n  disambiguation_message:\n    type: unfeaturized\nactions:\n  - action_botfront_disambiguation\n  - action_botfront_disambiguation_followup\n  - action_botfront_fallback\n  - action_botfront_mapping',
+            'slots:\n  disambiguation_message:\n    type: any\nactions:\n  - action_botfront_disambiguation\n  - action_botfront_disambiguation_followup\n  - action_botfront_fallback\n  - action_botfront_mapping',
         },
         nluThreshold: 0.75,
         timezoneOffset: 0,

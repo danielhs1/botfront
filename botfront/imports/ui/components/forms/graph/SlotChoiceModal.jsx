@@ -15,7 +15,7 @@ import { GraphContext } from './graph.utils';
 import { ProjectContext } from '../../../layouts/context';
 
 
-const defaultSlot = { type: 'unfeaturized', name: '' };
+const defaultSlot = { type: 'any', name: '' };
 
 const SlotChoiceModal = (props) => {
     const { onSlotChoice, onSlotSetChoice, node } = props;
@@ -172,7 +172,7 @@ const SlotChoiceModal = (props) => {
                 'text',
                 'float',
                 'list',
-                'unfeaturized',
+                'any',
                 'any',
             ]}
         />

@@ -25,7 +25,7 @@ policies:
 defaultDomain:
   slots:
     disambiguation_message:
-      type: unfeaturized
+      type: any
   actions:
     - action_botfront_disambiguation
     - action_botfront_disambiguation_followup

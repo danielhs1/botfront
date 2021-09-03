@@ -28,7 +28,6 @@ const SlotSetNode = (props) => {
                         'text',
                         'float',
                         'list',
-                        'unfeaturized',
                         'any',
                     ]}
                 />

@@ -1,7 +1,7 @@
 slots:
   disambiguation_message:
-    type: unfeaturized
+    type: any
   test_message_b:
-    type: unfeaturized
+    type: any
 actions:
   - action_aaa

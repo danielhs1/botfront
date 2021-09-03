@@ -168,7 +168,7 @@ const AddStoryLine = React.forwardRef((props, ref) => {
                         </DashedButton>
                     )}
                     trackOpenMenu={trackOpenMenu}
-                    excludedSlotsOfType={['unfeaturized']}
+                    excludedSlotsOfType={['any']}
                 />
             )}
             {loopActive && (

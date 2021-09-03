@@ -102,7 +102,7 @@ if (Meteor.isServer) {
             await Slots.remove({ projectId: 'bf' });
             done();
         })());
-        it('should delete unfeaturized slots', done => (async () => {
+        it('should delete any slots', done => (async () => {
             DDP._CurrentInvocation.withValue(
                 new DDPCommon.MethodInvocation({ userId: testUser._id }),
                 async () => {

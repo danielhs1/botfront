@@ -3,7 +3,7 @@ export const validDefaultDomain = {
     rawText:
     `slots:
     test_message:
-      type: unfeaturized
+      type: any
 actions:
     - action_aaa
 responses:
@@ -29,7 +29,7 @@ export const validDefaultDomain2 = {
     rawText:
     `slots:
     info_message:
-      type: unfeaturized
+      type: any
 actions:
     - action_bbb
     - action_aaa
@@ -57,7 +57,7 @@ export const invalidDefaultDomain = {
     `
     slots:
 a_message:
-      type: unfeaturized
+      type: any
 actions:
     - action_zzz
     - action_yyy
@@ -68,7 +68,7 @@ actions:
 
 export const validDefaultDomainParsed = {
     slots: {
-        test_message: { type: 'unfeaturized' },
+        test_message: { type: 'any' },
     },
     responses: {
         utter_goodbye: [
@@ -109,7 +109,7 @@ export const validDefaultDomainParsed = {
 export const validDefaultDomainParsed2 = {
     slots:
         {
-            info_message: { type: 'unfeaturized' },
+            info_message: { type: 'any' },
            
         },
     responses: {
@@ -151,8 +151,8 @@ export const validDefaultDomainParsed2 = {
 export const mergedDefaultDomains = {
     slots:
         {
-            test_message: { type: 'unfeaturized' },
-            info_message: { type: 'unfeaturized' },
+            test_message: { type: 'any' },
+            info_message: { type: 'any' },
         },
     responses: {
         utter_double: [

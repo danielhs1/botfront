@@ -33,7 +33,7 @@ Therefore you can re-use the same intent several times in a row and give differe
 # Using slots to remember facts
 
 Slots are containers you can create to store information in the conversation's context.
-Slots comes in different types. **Unfeaturized** slots can be used only to store information,
+Slots comes in different types. **any** slots can be used only to store information,
 while other types of slots can also influence the course of the conversation.
 
 
@@ -163,7 +163,7 @@ class CheckBalance(Action):
 
 > **Note**:
 >
-> An unfeaturized slot **balance** should also be created (not shown in the video)
+> An any slot **balance** should also be created (not shown in the video)
 
 ### List slots
 
@@ -213,9 +213,9 @@ class SearchProducts(Action):
 
 This will work, however we recommend writing custom actions as specialized and atomic as possible and leave most of the conversation flow design in the editor.
 
-### Unfeaturized slots
+### any slots
 
-Unfeaturized are slots that are only used to store information. They cannot be used to branch conversations.
+any are slots that are only used to store information. They cannot be used to branch conversations.
 
 
 ### For more information on slots

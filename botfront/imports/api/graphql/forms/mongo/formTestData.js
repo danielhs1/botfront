@@ -110,16 +110,16 @@ export const slotStory = {
 };
 export const slots = [
     {
-        _id: '3HHBdjtWkCrTuRpvA', name: 'test_slot_A', type: 'unfeaturized', projectId: 'bf',
+        _id: '3HHBdjtWkCrTuRpvA', name: 'test_slot_A', type: 'any', projectId: 'bf',
     },
     {
-        _id: 'BdzWzwvX9SrqxCtPT', name: 'test_slot_B', type: 'unfeaturized', projectId: 'bf',
+        _id: 'BdzWzwvX9SrqxCtPT', name: 'test_slot_B', type: 'any', projectId: 'bf',
     },
     {
         _id: 'MCndTa5vqvfgna7QL', type: 'bool', projectId: 'bf', name: 'used_slot',
     },
     {
-        _id: 'mSjpPPpaKDNLA8tAs', type: 'unfeaturized', projectId: 'bf', name: 'used_slot_2',
+        _id: 'mSjpPPpaKDNLA8tAs', type: 'any', projectId: 'bf', name: 'used_slot_2',
     },
     {
         _id: 'ne6vT2CzXproj7T2i', type: 'bool', projectId: 'bf', name: 'unused_slot',
@@ -132,7 +132,7 @@ export const expectedRemainingSlots = [
         _id: 'MCndTa5vqvfgna7QL', type: 'bool', projectId: 'bf', name: 'used_slot',
     },
     {
-        _id: 'mSjpPPpaKDNLA8tAs', type: 'unfeaturized', projectId: 'bf', name: 'used_slot_2',
+        _id: 'mSjpPPpaKDNLA8tAs', type: 'any', projectId: 'bf', name: 'used_slot_2',
     },
     {
         _id: 'ne6vT2CzXproj7T2i', type: 'bool', projectId: 'bf', name: 'unused_slot',
