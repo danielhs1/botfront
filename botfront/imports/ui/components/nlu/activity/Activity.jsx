@@ -74,7 +74,7 @@ function Activity(props) {
         projectId,
         language,
         env: environment,
-        pageSize: 20,
+        pageSize: 12,
         filter,
         ...getSortFunction(),
     }), [projectId, language, environment, filter, getSortFunction()]);

@@ -74,22 +74,37 @@ export const caught = func => async (done) => {
 export const parseTextEntities = (text = '') => {
     let parsedText = text;
     const parsedEntities = [];
-    const hasEntity = /\[.*\]{".*":\s*".*"}/g;
+    const hasEntity = /\[(.*)\]({\s*"entity"\s*:\s*".*"\s*})/;
     let charIndex = 0;
 
-    const replaceEntities = (matchedText, relativeStart) => {
+    const replaceEntities = (matchedText, entityValue, entityDataJson, relativeStart) => {
+        const entityData = JSON.parse(entityDataJson);
+        const entityName = entityData.entity;
+
         const start = relativeStart + charIndex;
-        const end = matchedText.replace(/[[]]/g).indexOf(']');
-        const pickupAfter = matchedText.indexOf('"}') + 2;
-        const entityValue = matchedText.slice(1, end);
-        const entityName = matchedText.split(/{"entity":\s*"/)[1].split('"}')[0];
-        const valueLength = end - 1;
+        // end of the parsed string
+        const end = start + entityValue.length;
+
+        // end of the unparsed string
+        const pickupAfter = start + matchedText.length;
+
+        // if the value is a JSON, then:
+        // 1. the start and end should match the start and end of the JSON
+        // 2. the value should match whatever is the first value in that JSON
+        // which means that the start and end will not correspond to the value
+        // on the original string. that is the expected behavior.
+        let parsedValue;
+        try {
+            [parsedValue] = Object.values(JSON.parse(entityValue));
+        } catch {
+            parsedValue = entityValue;
+        }
 
         parsedEntities.push({
-            start, end: start + valueLength, entity: entityName, value: entityValue,
+            start, end, entity: entityName, value: parsedValue,
         });
 
-        let newText = `${matchedText.slice(1, end)}${matchedText.slice(pickupAfter)}`;
+        let newText = `${entityValue}${matchedText.slice(pickupAfter)}`;
 
         if (hasEntity.test(newText)) {
             charIndex += relativeStart;
